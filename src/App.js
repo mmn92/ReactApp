@@ -1,7 +1,10 @@
 import React from "react";
+import { Header, Title } from './components/HeaderEvents/styles';
 
 const App = () => (
-  <h1>Test this</h1>
+  <Header>
+    <Title>testHeader</Title>
+  </Header>
 )
 
 export default App;
