@@ -1,10 +1,13 @@
-import React from "react";
-import { Header, Title } from './components/HeaderEvents/styles';
+import React, { Fragment } from "react";
+
+import HeaderEvents from './components/HeaderEvents';
+import NavigationEvents from './components/NavigationEvents';
 
 const App = () => (
-  <Header>
-    <Title>testHeader</Title>
-  </Header>
+  <Fragment>
+    <HeaderEvents />
+    <NavigationEvents />
+  </Fragment>
 )
 
 export default App;
