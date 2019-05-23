@@ -1,18 +1,22 @@
-import React, { Fragment } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Fragment } from "react";
+import ReactDOM from "react-dom";
 
-import Colors from './styles/settings/Colors';
-import Size from './styles/settings/Size';
-import Reset from './styles/generic/Reset';
-import Base from './styles/Base';
+import Colors from "./styles/settings/Colors";
+import Size from "./styles/settings/Size";
+import Reset from "./styles/generic/Reset";
+import Base from "./styles/Base";
 
-import App from './App';
+import App from "./App";
+
+import "./index.css";
 
 ReactDOM.render(
-    <Fragment>
-        <Colors />
-        <Size />
-        <Reset />
-        <Base />
-        <App />
-    </Fragment>, document.getElementById('root'));
+  <Fragment>
+    <Colors />
+    <Size />
+    <Reset />
+    <Base />
+    <App />
+  </Fragment>,
+  document.getElementById("root")
+);

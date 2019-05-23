@@ -1,13 +1,22 @@
-import React, { Fragment } from "react";
+import React from "react";
 
-import HeaderEvents from './components/HeaderEvents';
-import NavigationEvents from './components/NavigationEvents';
+import Tabs from "./components/Tabs";
 
 const App = () => (
-  <Fragment>
-    <HeaderEvents />
-    <NavigationEvents />
-  </Fragment>
-)
+  <div>
+    <h1>Tabs Demo</h1>
+    <Tabs>
+      <div label="Gator">
+        See ya later, <em>Alligator</em>!
+      </div>
+      <div label="Croc">
+        After 'while', <em>Crocodile</em>!
+      </div>
+      <div label="Sarcosuchus">
+        Nothing to see here, this tab is <em>extinct</em>!
+      </div>
+    </Tabs>
+  </div>
+);
 
 export default App;
