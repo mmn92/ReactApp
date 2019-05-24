@@ -12,8 +12,14 @@ class Tabs extends Component {
     super(props);
 
     this.state = {
-      activeTab: this.props.children[0].props.label
+      activeTab: ""
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      activeTab: this.props.children[0].props.label
+    });
   }
 
   onClickTabItem = tab => {
@@ -42,7 +48,7 @@ class Tabs extends Component {
           })}
         </ol>
         <div className="tab-content">
-          {children.map(child => {
+          {children.filter(child => {
             if (child.props.label !== activeTab) return undefined;
             return child.props.children;
           })}
