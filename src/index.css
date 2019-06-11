@@ -22,6 +22,12 @@ main {
   border: 1px solid black;
 }
 
+nav {
+  position: absolute;
+  top: 20%;
+  left: 0;
+}
+
 footer {
   position: absolute;
   bottom: 0;

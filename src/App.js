@@ -3,6 +3,8 @@ import axios from "axios";
 
 import Tabs from "./components/Tabs";
 import Accordion from "./components/Accordion";
+import { Display } from "./components/Display";
+import Button from "./components/Button";
 
 class App extends Component {
   constructor(props) {
@@ -13,23 +15,14 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    let message = "";
-    axios
-      .get("https://sample-api-78c77.firebaseio.com/tv-shows/SHOW123.json")
-      .then(res => {
-        message = res.data;
-        this.setState({ message: message.Title });
-      })
-      .catch(err => console.log(err));
-  }
+  componentDidMount() {}
 
   render() {
     return (
       <Fragment>
         <header>
           <h1>Title here</h1>
-          <h2>{this.state.message}</h2>
+          <h2>more text here</h2>
         </header>
         <main>
           <h1>Accordion Demo</h1>
@@ -58,6 +51,10 @@ class App extends Component {
             </div>
           </Accordion>
         </main>
+        <nav>
+          <Display name="Matheus" />
+          <Button text="Default" />
+        </nav>
         <footer>
           <h1>Tabs Demo</h1>
           <Tabs>
