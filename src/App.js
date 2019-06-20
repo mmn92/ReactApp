@@ -5,17 +5,26 @@ import Tabs from "./components/Tabs";
 import Accordion from "./components/Accordion";
 import { Display } from "./components/Display";
 import Button from "./components/Button";
+import { Modal } from "./components/Modal";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      message: ""
+      message: "",
+      isOpen: false
     };
+
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   componentDidMount() {}
+
+  handleOpen() {}
+
+  handleClose() {}
 
   render() {
     return (
@@ -53,7 +62,8 @@ class App extends Component {
         </main>
         <nav>
           <Display name="Matheus" />
-          <Button text="Default" />
+          <button onClick={this.handleOpen}> Open </button>
+          <Modal isOpen={this.state.isOpen}>Hi there.</Modal>
         </nav>
         <footer>
           <h1>Tabs Demo</h1>
