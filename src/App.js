@@ -22,9 +22,13 @@ class App extends Component {
 
   componentDidMount() {}
 
-  handleOpen() {}
+  handleOpen() {
+    this.setState({ isOpen: true });
+  }
 
-  handleClose() {}
+  handleClose() {
+    this.setState({ isOpen: false });
+  }
 
   render() {
     return (
@@ -63,7 +67,10 @@ class App extends Component {
         <nav>
           <Display name="Matheus" />
           <button onClick={this.handleOpen}> Open </button>
-          <Modal isOpen={this.state.isOpen}>Hi there.</Modal>
+          <Modal isOpen={this.state.isOpen} handleClose={this.handleClose}>
+            <p>Hi there.</p>
+            <p>Text here.</p>
+          </Modal>
         </nav>
         <footer>
           <h1>Tabs Demo</h1>
